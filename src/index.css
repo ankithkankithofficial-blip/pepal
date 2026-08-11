@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  .font-sans {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Aurora Glow & Mesh Animations */
+@keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes floatLight {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+.aurora-bg {
+  background: linear-gradient(
+    -45deg,
+    #05150d,
+    #0a2818,
+    #0a2233,
+    #133827,
+    #061a12
+  );
+  background-size: 400% 400%;
+  animation: aurora 18s ease infinite;
+}
+
+.aurora-ocean {
+  background: linear-gradient(
+    -45deg,
+    #071927,
+    #0f344d,
+    #0b2336,
+    #13445e,
+    #0a1a27
+  );
+  background-size: 400% 400%;
+  animation: aurora 20s ease infinite;
+}
+
+.aurora-terracotta {
+  background: linear-gradient(
+    -45deg,
+    #59160a,
+    #8c2b18,
+    #3b1008,
+    #a83e20,
+    #4a1207
+  );
+  background-size: 400% 400%;
+  animation: aurora 16s ease infinite;
+}
+
+.animate-float {
+  animation: floatLight 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Animated Gradient Text for Hero Headline */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-text {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    #ffffff 20%,
+    #fceabb 40%,
+    #6ee7b7 60%,
+    #fceabb 80%,
+    rgba(255, 255, 255, 0.45) 100%
+  );
+  background-size: 250% 250%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 7s ease-in-out infinite;
+}
+
+/* Gold Text Shimmer */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fceabb 0%, #f8b500 35%, #d4af37 70%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #08130d;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e3a2a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
