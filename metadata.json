@@ -1,0 +1,6 @@
+{
+  "name": "PEPAL - Luxury Smart Hydration",
+  "description": "High-end e-commerce experience for PEPAL luxury smart hydration vessels and wellness products.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
